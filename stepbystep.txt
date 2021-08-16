@@ -12,6 +12,9 @@ git checkout <nombre de la rama a cambiar> = cambia de rama
 
 git branch -b <nombre de la rama> = Crea una rama nueva y cambia hacia ella
 
+git fetch = Actualiza las referencias de un repositorio
+
+git pull <repositorio a halar cambios> <rama> = hala los cambios de una rama
 --------
 Otros:
 
