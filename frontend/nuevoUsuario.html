@@ -11,6 +11,7 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   </head>
   <body>
 
@@ -20,21 +21,38 @@
         <form action="">
           <div class="row">
             <div class="col-4">Nombre:</div>
-            <div class="col-8"><input class="w-100" type="text" /></div>
+            <div class="col-8"><input name="nombre" class="w-100" type="text" /></div>
           </div>
           <div  class="row">
             <div class="col-4">Email:</div>
-            <div class="col-8"><input  class="w-100" type="text" /></div>
+            <div class="col-8"><input name="email" class="w-100" type="text" /></div>
           </div>
           <div  class="row">
             <div class="col-4">Foto de perfil:</div>
            
-              <input class="col-5" type="file"  class="w-100" /> <button class="col-3">Subir</button>
+              <input class="col-5" type="file" name="foto"  class="w-100" /> <button class="btn-primary col-3">Subir</button>
             </div>
           </div>
         </form>
       </div>
     </div>
+
+    <script>
+      $("form").submit(async(event)=>{
+        event.preventDefault()
+        
+        const email = $("email").value
+        const nombre = $("nombre").value
+        const foto = $("foto").value
+        console.log(email)
+      })
+      
+
+
+
+
+
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
