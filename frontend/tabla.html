@@ -73,10 +73,32 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const eliminarUsuario = async (id) => {
-        const response = await fetch(`http://localhost:3000/usuario?id=${id}`, {
-          method: "DELETE",
+      const getUsuarios = async () => {
+        const response = await axios.get("http://localhost:3000/usuarios");
+        let data = await response.json();
+        $(".usuarios").html("");
+
+        $.each(data, (i, c) => {
+          $(".usuarios").append(`
+            <tr>
+              <td>${c.nombre}</td>
+              <td>${c.fotografia}</td>
+              <td>${c.correo}</td>
+              <td>
+                <button class="btn btn-danger" onclick="eliminarUsuario('${c.id}')">Eliminar</button>
+              </td>
+            </tr>
+          `);
         });
+      };
+
+      const eliminarUsuario = async (id) => {
+        const response = await axios.delete(
+          `http://localhost:3000/usuario?id=${id}`,
+          {
+            method: "DELETE",
+          }
+        );
         getUsuarios();
       };
     </script>
