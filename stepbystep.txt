@@ -1,0 +1,27 @@
+git init = Inicio del repositorio
+
+git add . = Agrega los cambios al stage
+
+git commit . = Agrega los cambios al empaquetado
+
+git push <repositorio destino> <rama destino> = Envía el commit al destino
+
+git clone <repositorio remoto> = Clona un repositorio remoto trayendo el .git con su historial
+
+git checkout <nombre de la rama a cambiar> = cambia de rama
+
+git branch -b <nombre de la rama> = Crea una rama nueva y cambia hacia ella
+
+git fetch = Actualiza las referencias de un repositorio
+
+git pull <repositorio a halar cambios> <rama> = hala los cambios de una rama
+
+git branch = muestra las ramas actuales del repositorio local
+
+git branch -r = muestra las ramas actuales del repositorio remoto
+
+--------
+Otros:
+
+git status => ver los archivos en stage
+git log => ver los commits realizados
