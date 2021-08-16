@@ -27,6 +27,15 @@ const getUsers = async () => {
   return resp.rows;
 };
 
+const addUser = async (values) => {
+  const query = {
+    text: 'INSERT INTO users VALUES(default, $1, $2, $3) RETURNING *;',
+    values
+  };
+  const resp = await pool.query(values);
+  return resp.rows;
+};
+
 const deletUsers = async (values) => {
   const query = {
     text: "DELETE FROM users WHERE id = $1 RETURNING *;",
@@ -48,6 +57,7 @@ const setUser = async (values) => {
 module.exports = {
   getUser,
   getUsers,
+  addUser,
   deletUsers,
   setUser,
 };
