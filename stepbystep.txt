@@ -1,0 +1,14 @@
+git init = Inicio del repositorio
+
+git add . = Agrega los cambios al stage
+
+git commit . = Agrega los cambios al empaquetado
+
+git push <repositorio destino> <rama destino> = Envía el commit al destino
+
+
+--------
+Otros:
+
+git status => ver los archivos en stage
+git log => ver los commits realizados
