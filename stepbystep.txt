@@ -15,6 +15,11 @@ git branch -b <nombre de la rama> = Crea una rama nueva y cambia hacia ella
 git fetch = Actualiza las referencias de un repositorio
 
 git pull <repositorio a halar cambios> <rama> = hala los cambios de una rama
+
+git branch = muestra las ramas actuales del repositorio local
+
+git branch -r = muestra las ramas actuales del repositorio remoto
+
 --------
 Otros:
 
